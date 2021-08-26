@@ -9,6 +9,14 @@
   },
   {
     "model": "products.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "Обувь",
+      "description": "Описание для обуви"
+    }
+  },
+  {
+    "model": "products.productcategory",
     "pk": 3,
     "fields": {
       "name": "Одежда",
