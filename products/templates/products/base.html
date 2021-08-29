@@ -16,7 +16,7 @@
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    {% block css %}{% endblock %}
+    {% block css %} {% endblock %}
 
 </head>
 
@@ -33,13 +33,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products:index' %}">Каталог <i class="fas fa-shopping-bag"></i>
-                    </a>
+                    <a class="nav-link" href="{% url 'products:index' %}">Каталог <i class="fas fa-shopping-bag"></i> </a>
                 </li>
                 {% if user.is_authenticated %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="auth/profile.html">{{ user.username }}<i
-                                class="fas fa-user-circle"></i></a>
+                     <li class="nav-item">
+                    <a class="nav-link" href="{% url 'users:profile' %}">{{ user.username }}<i class="fas fa-user-circle"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="admin/admin.html">
@@ -47,8 +45,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'users:logout' %}">Выйти <i
-                                class="fas fa-sign-out-alt"></i></a>
+                        <a class="nav-link" href="{% url 'users:logout' %}">Выйти <i class="fas fa-sign-out-alt"></i></a>
                     </li>
                 {% else %}
                     <li class="nav-item">
@@ -61,10 +58,10 @@
 </nav>
 
 <!-- Page Content -->
-{% block content %}{% endblock %}
+{% block content %} {% endblock %}
 
 <!-- Footer -->
-{% block footer %}{% endblock %}
+{% block footer %} {% endblock %}
 
 <!-- Bootstrap core JavaScript -->
 <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>

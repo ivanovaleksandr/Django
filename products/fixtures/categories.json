@@ -7,7 +7,7 @@
       "description": "Описание новинок"
     }
   },
-  {
+    {
     "model": "products.productcategory",
     "pk": 2,
     "fields": {
