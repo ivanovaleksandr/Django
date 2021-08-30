@@ -33,11 +33,13 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'products:index' %}">Каталог <i class="fas fa-shopping-bag"></i> </a>
+                    <a class="nav-link" href="{% url 'products:index' %}">Каталог <i class="fas fa-shopping-bag"></i>
+                    </a>
                 </li>
                 {% if user.is_authenticated %}
-                     <li class="nav-item">
-                    <a class="nav-link" href="{% url 'users:profile' %}">{{ user.username }}<i class="fas fa-user-circle"></i></a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'users:profile' %}">{{ user.username }}<i
+                                class="fas fa-user-circle"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="admin/admin.html">
@@ -45,7 +47,8 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'users:logout' %}">Выйти <i class="fas fa-sign-out-alt"></i></a>
+                        <a class="nav-link" href="{% url 'users:logout' %}">Выйти <i
+                                class="fas fa-sign-out-alt"></i></a>
                     </li>
                 {% else %}
                     <li class="nav-item">
@@ -69,6 +72,7 @@
 
 <!-- FontAwesome script -->
 <script src="{% static 'vendor/fontawesome/fontawesome-icons.js' %}" crossorigin="anonymous"></script>
+<script src="{% static 'js/basket.js' %}"></script>
 
 </body>
 
