@@ -1,3 +1,1 @@
-.idea, 
-__pycache__/, 
-db.sqlite3
+# My server project

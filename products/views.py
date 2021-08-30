@@ -2,10 +2,8 @@ from django.shortcuts import render
 from datetime import datetime
 from products.models import Product, ProductCategory
 
-
-# HttpRequest
 # Create your views here.
-# функции = контроллеры = вьюхи
+# Контроллеры:
 
 def index(request):
     context = {
@@ -17,8 +15,8 @@ def index(request):
     }
     return render(request, 'products/index.html', context)
 
-
 def products(request):
+
     context = {
         'title': 'GeekShop - Каталог',
         'navigationText': 'GeekShop',
